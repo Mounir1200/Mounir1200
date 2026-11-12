@@ -23,8 +23,9 @@ jobs:
         with:
           body: asagi
           output-dir: koi
-      # The README shows the koi at full width, so double it pixel for pixel
-      # (no smoothing) to keep the pixel art sharp when it is scaled up.
+      # The README shows the koi 512 px wide. Doubling it pixel for pixel (no
+      # smoothing) to 1024 px maps one GIF pixel to one screen pixel on 2x
+      # (Retina) displays, so the pixel art stays sharp.
       - name: Enlarge the koi without blurring it
         shell: bash
         run: |
